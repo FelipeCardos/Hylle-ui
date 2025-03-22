@@ -1,7 +1,20 @@
 import '../styles/global.css'
 
-import { Slot } from 'expo-router'
+import { Stack } from 'expo-router'
 
-export default function Layout(){
-  return <Slot/>
+export default function Layout() {
+  return (
+    <Stack
+      screenOptions={{
+        headerStyle: { backgroundColor: "#1E40AF" }, // Cor do cabeçalho
+        headerTintColor: "#fff", // Cor do texto no cabeçalho
+        headerTitleAlign: "center", // Centraliza o título
+      }}
+    >
+      {/* Definir a Home como tela principal */}
+      <Stack.Screen name="index" options={{ title: "Hylle" }} />
+      <Stack.Screen name="Login" options={{ title: "Sign In" }} />
+      <Stack.Screen name="CreateAccount" options={{ title: "Create Account" }} />
+    </Stack>
+  );
 }
