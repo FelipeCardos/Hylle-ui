@@ -11,7 +11,7 @@ export default function Layout() {
         headerTitleAlign: "center", // Centraliza o título
       }}
     >
-      {/* Definir a Home como tela principal */}
+      <Stack.Screen name="Home" options={{ title: "Home", headerBackVisible: false }}/>
       <Stack.Screen name="index" options={{ title: "Hylle" }} />
       <Stack.Screen name="Login" options={{ title: "Sign In" }} />
       <Stack.Screen name="CreateAccount" options={{ title: "Create Account" }} />
