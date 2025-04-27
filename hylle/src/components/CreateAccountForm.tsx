@@ -72,6 +72,12 @@ export default function CreateAccountForm(){
               Agree with the terms of use and privacy policy
             </Text>
           </TouchableOpacity>
+          <View>
+          <TouchableOpacity 
+            className="h-12 bg-blue-500 rounded-md items-center justify-center">
+            <Text className="text-white font-bold">Create Account</Text>
+          </TouchableOpacity>
+          </View>
         </View>
     )
 }
