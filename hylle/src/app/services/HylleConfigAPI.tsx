@@ -10,7 +10,7 @@ const hylleAPI = axios.create({
   },
 });
 
-const publicRoutes = ['/user', '/auth/login', '/auth/register'];
+const publicRoutes = ['/user', '/auth/sign-in', '/auth/register'];
 
 const getToken = async (): Promise<string | null> => {
   const token = await AsyncStorage.getItem('token');

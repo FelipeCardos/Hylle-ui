@@ -34,9 +34,8 @@ export default function CreateAccountForm() {
     try {
       const { token, user } = await createUser(email, password, name, username);
       await AsyncStorage.setItem('token', token);
-      await AsyncStorage.setItem('userInfo', JSON.stringify(user));  // Salva o user como string JSON
+      await AsyncStorage.setItem('userInfo', JSON.stringify(user)); 
 
-      // Aguarda 1 segundo para garantir que os dados sejam gravados antes de navegar
       setTimeout(() => {
         setIsLoading(false);
         router.replace('/Home');
@@ -125,7 +124,7 @@ export default function CreateAccountForm() {
       </TouchableOpacity>
       <View>
         <TouchableOpacity 
-          className="h-12 bg-blue-500 rounded-md items-center justify-center" 
+          className="h-12 bg-blue-500 rounded-md items-center justify-center mb-4" 
           onPress={handleCreateAccount}
           disabled={isLoading}
         >
