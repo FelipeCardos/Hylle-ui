@@ -22,7 +22,7 @@ export default function SignInForm(){
             await AsyncStorage.setItem('token', token);
             await AsyncStorage.setItem('userInfo', JSON.stringify(user));
 
-            router.replace('/Home');
+            router.replace('/tabs/HomeTab');
         }catch(error){
             console.log("Error to authenticate the user", error)
             Alert.alert('Error', 'Error to authenticate the user');

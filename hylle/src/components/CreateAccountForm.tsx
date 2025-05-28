@@ -38,7 +38,7 @@ export default function CreateAccountForm() {
 
       setTimeout(() => {
         setIsLoading(false);
-        router.replace('/Home');
+        router.replace('/tabs/HomeTab');
       }, 1000);
 
     } catch (error) {
